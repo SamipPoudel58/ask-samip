@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Header from '../components/header';
 import HomePlate from '../components/home-plate';
+import Loader from '../components/loader';
 import QuestionPlate from '../components/question-plate';
 
 const Home: NextPage = () => {
@@ -63,7 +64,7 @@ const Home: NextPage = () => {
         {hasQuestion ? (
           <QuestionPlate question={formattedQuestion} answer={answer} />
         ) : (
-          <HomePlate />
+          <Loader />
         )}
       </main>
     </div>

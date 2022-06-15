@@ -30,7 +30,7 @@ const QuestionPlate = ({
         {question.split('-').join(' ') + '?'}
       </h1>
 
-      <div className="flex justify-center mt-8 sm:mt-16">
+      <div className="flex justify-center mt-8 sm:mt-12">
         <img
           className="w-[520px]"
           src={yes ? yesImages[imageNumber] : noImages[imageNumber]}
