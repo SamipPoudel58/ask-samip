@@ -1,23 +1,21 @@
-import Image from 'next/image';
-
 const HomePlate = () => (
   <div>
-    <h1 className="text-primary font-playfair text-8xl text-center mb-4">
+    <h1 className="text-primary font-playfair text-[60px] sm:text-8xl text-center mb-2 sm:mb-4">
       Ask Samip
     </h1>
-    <p className="text-gray-400 text-xl">
+    <p className="text-gray-400 text-[13px] sm:text-xl">
       DM some stupid Yes/No questions down below! 👇
     </p>
 
     <div className="flex justify-between items-center mt-8">
       <a
-        className="group text-gray-300 hover:text-primary"
+        className=" text-gray-300 hover:text-primary"
         href="https://twitter.com/samip4sure"
         target="_blank"
         rel="noopener noreferrer"
       >
         <svg
-          className="group-hover:fill-primary transition-colors duration-300"
+          className="w-[30px] sm:w-[50px] h-[30px] sm:h-[50px] transition-colors duration-300"
           width="50"
           height="50"
           viewBox="0 0 51 50"
@@ -31,12 +29,13 @@ const HomePlate = () => (
         </svg>
       </a>
       <a
-        className="group text-gray-300 hover:text-primary"
+        className=" text-gray-300 hover:text-primary"
         href="https://samiptter.herokuapp.com/profile/samip4sure"
         target="_blank"
         rel="noopener noreferrer"
       >
         <svg
+          className="w-[30px] sm:w-[55px] h-[30px] sm:h-[55px]"
           width="55"
           height="55"
           viewBox="0 0 55 55"
@@ -58,12 +57,13 @@ const HomePlate = () => (
         </svg>
       </a>
       <a
-        className="group text-gray-300 hover:text-primary"
+        className=" text-gray-300 hover:text-primary"
         href="https://www.instagram.com/samip4sure/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <svg
+          className="w-[30px] sm:w-[50px] h-[30px] sm:h-[50px]"
           width="50"
           height="50"
           viewBox="0 0 50 50"
@@ -79,12 +79,13 @@ const HomePlate = () => (
         </svg>
       </a>
       <a
-        className="group text-gray-300 hover:text-primary"
+        className=" text-gray-300 hover:text-primary"
         href="mailto:sawmeep58@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
       >
         <svg
+          className="w-[30px] sm:w-[50px] h-[30px] sm:h-[50px]"
           width="55"
           height="55"
           viewBox="0 0 50 50"

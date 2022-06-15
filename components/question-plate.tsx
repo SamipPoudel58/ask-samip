@@ -23,11 +23,11 @@ const QuestionPlate = ({
     : Math.floor(Math.random() * yesImages.length);
   return (
     <div className="max-w-[800px] mx-auto">
-      <h1 className="text-primary font-playfair text-4xl text-center">
+      <h1 className="text-primary font-playfair text-3xl sm:text-4xl text-center">
         {question.split('-').join(' ') + '?'}
       </h1>
 
-      <div className="flex justify-center mt-16">
+      <div className="flex justify-center mt-8 sm:mt-16">
         <div className="relative">
           <Image
             className="object-fit"
