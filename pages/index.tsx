@@ -18,7 +18,6 @@ const Home: NextPage = () => {
       .slice(0, -1)
       .map((word) => word[0].toUpperCase() + word.slice(1))
       .join(' ');
-    console.log(formattedQuestion, answer);
   }
 
   return (

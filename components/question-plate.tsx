@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 
 const QuestionPlate = ({
@@ -16,7 +17,9 @@ const QuestionPlate = ({
     'https://c.tenor.com/6DqfGATMUJkAAAAd/nooo-no.gif',
   ];
 
-  const yes = Boolean(answer[0]);
+  const yes = Boolean(Number(answer[0]));
+
+  console.log(answer, yes);
 
   const imageNumber = answer[1]
     ? Number(answer[1])
@@ -28,7 +31,12 @@ const QuestionPlate = ({
       </h1>
 
       <div className="flex justify-center mt-8 sm:mt-16">
-        <div className="relative">
+        <img
+          className="w-[520px]"
+          src={yes ? yesImages[imageNumber] : noImages[imageNumber]}
+          alt="answer"
+        />
+        {/* <div className="relative">
           <Image
             className="object-fit"
             src={yes ? yesImages[imageNumber] : noImages[imageNumber]}
@@ -36,7 +44,7 @@ const QuestionPlate = ({
             width={520}
             height={350}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
