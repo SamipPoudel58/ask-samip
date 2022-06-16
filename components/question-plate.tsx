@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image';
-
 const QuestionPlate = ({
   question,
   answer,
@@ -27,7 +25,9 @@ const QuestionPlate = ({
   return (
     <div className="max-w-[800px] mx-auto">
       <h1 className="text-primary font-playfair text-3xl sm:text-4xl text-center">
+        <span className="text-gray-300">&ldquo; </span>
         {question.split('-').join(' ') + '?'}
+        <span className="text-gray-300"> &rdquo;</span>
       </h1>
 
       <div className="flex justify-center mt-8 sm:mt-12">
