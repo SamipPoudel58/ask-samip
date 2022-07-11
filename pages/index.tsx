@@ -59,7 +59,7 @@ const Home: NextPage = () => {
         <meta property="twitter:creator" content="@samip4sure" />
       </Head>
       {hasQuestion && <Header />}
-      <main className="min-h-[80vh] flex justify-center items-center px-8 lg:px-0">
+      <main className="h-screen flex justify-center items-center px-8 lg:px-0">
         {hasQuestion ? (
           <QuestionPlate question={formattedQuestion} answer={answer} />
         ) : (
