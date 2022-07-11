@@ -1,24 +1,21 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Header from '../components/header';
 import Loader from '../components/loader';
-import QuestionPlate from '../components/question-plate';
+import QuizPlate from '../components/quiz-plate';
 
-const Home: NextPage = () => {
+const Quiz = () => {
   const router = useRouter();
-  const hasQuestion = !!router.query.q;
-  let formattedQuestion = '';
-  let answer = '';
-  if (hasQuestion) {
-    const question = (router.query.q as string) || 'a-b-c';
-    answer = question.split('-').slice(-1)[0];
-    formattedQuestion = question
-      .split('-')
-      .slice(0, -1)
-      .map((word) => word[0].toUpperCase() + word.slice(1))
-      .join(' ');
-  }
+  const quizes = [
+    {
+      question: 'What',
+      answer: ['cc pwat', 'sisi pwat'],
+      messageImg:
+        'https://images.unsplash.com/photo-1508061501437-e1b984a4d665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80',
+    },
+  ];
+  const questionNumber = Number(router.query.q) || 1;
+  const { question, answer, messageImg } = quizes[questionNumber - 1];
 
   return (
     <div>
@@ -58,10 +55,16 @@ const Home: NextPage = () => {
         <meta property="twitter:site" content="@samip4sure" />
         <meta property="twitter:creator" content="@samip4sure" />
       </Head>
-      {hasQuestion && <Header />}
-      <main className="min-h-[80vh] flex justify-center items-center px-8 lg:px-0">
-        {hasQuestion ? (
-          <QuestionPlate question={formattedQuestion} answer={answer} />
+
+      {question && <Header />}
+
+      <main className="min-h-[90vh] flex justify-center items-center px-8 lg:px-0">
+        {question ? (
+          <QuizPlate
+            question={question}
+            answer={answer}
+            messageImg={messageImg}
+          />
         ) : (
           <Loader />
         )}
@@ -70,4 +73,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Quiz;
